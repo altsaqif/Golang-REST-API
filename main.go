@@ -31,5 +31,6 @@ func main() {
 	api.HandleFunc("/products", Delete).Methods("DELETE")
 
 	PORT := GoDotEnvVariable("APP_PORT")
+	log.Printf("connect to http://localhost:%s", PORT)
 	log.Fatal(http.ListenAndServe(PORT, r))
 }
