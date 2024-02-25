@@ -6,6 +6,7 @@ import (
 
 	. "github.com/altsaqif/go-restapi-gin/config"
 	. "github.com/altsaqif/go-restapi-gin/controllers/authController"
+	. "github.com/altsaqif/go-restapi-gin/controllers/homeController"
 	. "github.com/altsaqif/go-restapi-gin/controllers/productController"
 	. "github.com/altsaqif/go-restapi-gin/database"
 	"github.com/altsaqif/go-restapi-gin/middlewares"
@@ -19,6 +20,7 @@ func main() {
 	r.HandleFunc("/login", Login).Methods("POST")
 	r.HandleFunc("/register", Register).Methods("POST")
 	r.HandleFunc("/logout", Logout).Methods("GET")
+	r.HandleFunc("/", Home).Methods("GET")
 
 	// Penerapan Midlleware
 	api := r.PathPrefix("/api").Subrouter()
