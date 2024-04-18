@@ -1,3 +1,5 @@
 #Files to Ignore
 
 .env
+desktop.ini
+./tmp
