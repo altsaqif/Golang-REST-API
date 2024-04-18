@@ -1,4 +1,4 @@
-module github.com/altsaqif/go-restapi-gin
+module github.com/altsaqif/go-restapi-mux
 
 go 1.21.0
 
